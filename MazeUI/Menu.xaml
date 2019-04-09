@@ -1,0 +1,34 @@
+﻿<Window x:Class="MazeUI.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MazeUI"
+        mc:Ignorable="d"
+        Title="Menu" Height="600" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="40" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Column="1" Grid.Row="1" 
+                 Text="Labirynt" FontSize="40"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 />
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Button Content="Nowa Gra" MinHeight="50"/>
+
+            <Button Content="O nas" MinHeight="50"/>
+            <Button Content="Wyjście" MinHeight="50"/>
+        </StackPanel>
+    </Grid>
+</Window>
