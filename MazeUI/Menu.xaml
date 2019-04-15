@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MazeUI"
-        mc:Ignorable="d"
+        mc:Ignorable="d" FontWeight="DemiBold" FontSize="46" 
         Title="Menu" Height="600" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -18,17 +18,38 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
+        <!--
+        <Image Source="Images/mazeblack.png" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Foreground="Red" Text="Labirynth Game" />
+        -->
+        <!--
+        <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap"> 
+    <InlineUIContainer>
+        <Image Source="Images/mazeblack.png" ></Image>
+    </InlineUIContainer>
+       <Run FontSize="40">Labirynth Game</Run>
+    
+        </TextBlock>-->
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Background="Black" >
+            <Image Source="Images/mazeblack.png"/>
+            <TextBlock x:Name="Logo_TextBlock"    FontSize="44" Margin="10" Foreground="Red" Style="{DynamicResource Labirynth}">Labirynth <LineBreak /> Game</TextBlock>
+            <!--"Labirynth&#x0a;Game"-->
+        </StackPanel>
 
-        <TextBox Grid.Column="1" Grid.Row="1" 
-                 Text="Labirynt" FontSize="40"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 />
-        <StackPanel Grid.Column="1" Grid.Row="2">
-            <Button Content="Nowa Gra" MinHeight="50"/>
 
-            <Button Content="O nas" MinHeight="50"/>
-            <Button Content="Wyjście" MinHeight="50"/>
+
+
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Background="Black">
+            <Button x:Name="NewGame_Button" Content="New Game" MinHeight="50" Margin="0 20 0 10"  MouseEnter="NewGame_button_MouseEnter" Style="{StaticResource CustomFont}" />
+            <Button x:Name="Level_Button" Content="Level"  MinHeight="50" Margin="0 0 0 10" MouseEnter="NewGame_button_MouseEnter" Style="{StaticResource CustomFont}" />
+            <Button x:Name="About_Button" Content="About us"  MinHeight="50" Margin="0 0 0 10" MouseEnter="NewGame_button_MouseEnter" Style="{StaticResource CustomFont}" />
+            <Button x:Name="Options_Button" Content="Options"  MinHeight="50" Margin="0 0 0 10" MouseEnter="NewGame_button_MouseEnter" Style="{StaticResource CustomFont}" />
+            <Button x:Name="Exit_Button" Content="Exit"  MinHeight="50" Margin="0 0 0 10" MouseEnter="NewGame_button_MouseEnter" Style="{StaticResource CustomFont}"  />
+
+
+
+
         </StackPanel>
     </Grid>
 </Window>

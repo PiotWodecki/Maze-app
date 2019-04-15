@@ -6,12 +6,51 @@
     <!--StartupUri="MainWindow.xaml"-->
     <Application.Resources> 
         <!--jest globalne -->
-        <Style x:Name="MenuButton" TargetType="Button">
+        <Style x:Name="NewGame_button" TargetType="Button">
             <Setter Property="MinHeight" Value="50" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="Margin" Value="0 5" />
-
-
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontFamily" Value="Maze"/>
         </Style>
+        
+            <Style x:Key="CustomFont" TargetType="Button">
+                <Setter Property="TextElement.FontFamily" Value="/Fonts/#Maze"/>
+            
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Template">
+
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="Black"/>
+                        <Setter Property="Foreground" Value="Red"/>
+                        <Setter Property="FontSize" Value="60"/>
+                        <Setter Property="FontWeight" Value="ExtraBold"/>
+
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+        <Style x:Key="CustomImage" >
+            
+        </Style>
+
+        <Style x:Key="LabirynthFont" TargetType="TextBlock">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#LABIRYNTH"/>
+        </Style>
+        <Style x:Key="Labirynth" >
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Labirynth"/>
+        </Style>
+
     </Application.Resources>
 </Application>
