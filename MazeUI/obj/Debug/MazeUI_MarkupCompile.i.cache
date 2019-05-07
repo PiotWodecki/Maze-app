@@ -1,7 +1,7 @@
 ﻿MazeUI
 
 
-winexe
+exe
 C#
 .cs
 E:\c#\WPF\MazeApp\MazeUI\obj\Debug\
@@ -12,7 +12,7 @@ DEBUG;TRACE
 E:\c#\WPF\MazeApp\MazeUI\App.xaml
 21243084677
 
-10-2031736964
+12-968914779
 131569487696
 MazeWindow.xaml;Menu.xaml;
 

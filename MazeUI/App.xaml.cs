@@ -16,7 +16,8 @@ namespace MazeUI
         private void AppStart(object sender, StartupEventArgs e)
         {
             // Create the startup window
-            Menu wnd = new Menu();
+            //Menu wnd = new Menu();
+            MazeWindow wnd = new MazeWindow();
             // Show the window
             wnd.Show();
         }
